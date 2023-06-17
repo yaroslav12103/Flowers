@@ -1,409 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-
-html, body{
-	font-family: 'Comfortaa', cursive;
-	height: 100%;
-}
-.logop{
-	height: 57px;
-	width: 145px;
-}
-
-header{
-	border-bottom: 2px solid black;
-	margin: 0 auto;
-	align-items: center;
-	display: flex;
-	justify-content: space-around;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 441;
-	width: 100%;
-	background-color: white;
-	margin-top: 0 !important;
-}
-
-footer{
-	background-color: rgb(135, 255, 139);
-	border-top: 2px solid black;
-	width: 100vw;
-	margin-top: 20px;
-	position: absolute;
-	left: 0;
-}
-
-.tg{
-	margin-left: 5px;
-	margin-bottom: 5px;
-	width: 60px;
-	height: 60px;
-}
-
-.logo{
-	height: 50px;
-	width: 50px;
-	display: block;
-}
-
-.image{
-	border-radius: 10px;
-}
-
-.katalog{
-		display: flex;
-	justify-content: center;
-}
-
-a{
-	text-decoration: none;
-	color: black;
-}
-
-a:hover{
-	text-decoration: underline;
-	color: rgb(158, 137, 50);
-}
-
-.slick-slider {
-	display: flex !important;
-	align-items: center;
-}
-
-.carousel__item{
-	display: flex !important;
-	flex-direction: column;
-	margin-right: 20px;
-}
-
-.arrow{
-	height: 30px;
-	width: 43px;
-}
-
-.carousel{
-	margin-top: 15px;
-}
-
-.f_txt{
-	margin-left: 5px;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 5vw;
-}
-
-.content-blocker {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(135, 237, 26, 0.5);
-			opacity: 0,5;
-			z-index: 442;
-		}
-
-.item{
-	background-color: rgb(250, 240, 190);
-	width: 220px;
-	height: 326px;
-	border-radius: 10px;
-	margin-top: 30px;
-}
-
-.katalig{
-	padding-top: 20px;
-}
-
-.up{
-	width: 60px;
-	height: 60px;
-	border-radius: 100%;
-	border: 1px solid black;
-	background-color: green;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	z-index: 1000;
-}
-
-.arrowTop{
-	width: 79px;
-	height: 50px;
-}
-
-.imagei{
-	border-radius: 10px;
-	width: 200px;
-	height: 200px;
-	margin: 10px;
-}
-
-.ti{
-	margin: 10px;
-}
-
-main{
-	padding-top: 80px;
-}
+$('.carousel').slick({
+  	slidesToShow: 1,
+  	slidesToScroll: 1,
+  	autoplay: true,
+ 	autoplaySpeed: 2000,
+ 	prevArrow: '<img src="фотки/leftA.png" width="30px" height="30px" class="arrow">',
+  	nextArrow: '<img src="фотки/rightA.png" width="30px" height="30px" class="arrow">',
+});
 
 
+let item1 = document.querySelector('.item1')
+let item2 = document.querySelector('.item2')
+let item3 = document.querySelector('.item3')
+let item4 = document.querySelector('.item4')
+let item5 = document.querySelector('.item5')
+let item6 = document.querySelector('.item6')
+let item7 = document.querySelector('.item7')
+let item8 = document.querySelector('.item8')
+let item9 = document.querySelector('.item9')
 
-.buton1{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
+let opsp1 = true;
+let ops1 = document.querySelector('.ops1')
+let buton1 = document.querySelector('.buton1')
+let cb = document.querySelector('.content-blocker')
+let burger = document.querySelector('.burger-menu')
+let nav = document.querySelector('.main-nav')
+burger.addEventListener('click', function() {
+	 cb.classList.toggle('active')
+    burger.classList.toggle('active')
+    nav.classList.toggle('active') 
+})
 
-.buton2{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton3{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton4{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton5{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton6{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton7{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton8{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-
-.buton9{
-	width: 20px;
-	height: 20px;
-	margin: 10px;
-}
-.ops1{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops1.active{
-	display: block;
-}
-
-.ops2{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops2.active{
-	display: block;
-}
-
-.ops3{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops3.active{
-	display: block;
-}
-
-.ops4{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops4.active{
-	display: block;
-}
-
-.ops5{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops5.active{
-	display: block;
-}
-
-.ops6{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops6.active{
-	display: block;
-}
-
-.ops7{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops7.active{
-	display: block;
-}
-
-.ops8{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops8.active{
-	display: block;
-}
-
-.ops9{
-	margin-left: 10px;
-	display: none;
-}
-
-.ops9.active{
-	display: block;
-}
-
-.ops{
-	margin-left: 10px;
-	display: none;
-}
-
-@media (min-width: 320px) and (max-width: 700px) {
-    /*Бургер*/
-    .burger-menu {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        transition: 0.3s ease;
-    }
-
-    .burger-menu::before,
-    .burger-menu::after {
-        content: ''; /* пустой контент */
-        background: black; /*цвет бургера*/
-        position: absolute; /* позиция для общего блока*/
-        width: 100%; /* ширина*/
-        height: 3px; /* толщина полосок бургера */
-        transition: 0.3s ease;
-    }
-
-    .burger-menu::before {
-        top: 0; /* расположение верхней линии бургера */
-    }
-
-    .burger-menu span { /*средняя линия в виде span*/
-        background: black;
-        position: absolute; 
-        width: 100%;
-        top: 9px;
-        height: 3px; 
-    }
-    .burger-menu::after {
-        bottom: 0; /* расположение нижней линии бургера */
-    }
-
-    /*Меню*/
-    .main-nav {
-		  display: none;
-		  z-index: 443;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50vw;
-        height: 50vh;
-        background: white;
-        border: 1px solid black;
-        padding: 20px 10px;
-        transform: translateX(100%);
-    }
-
-    .nav-list {
-        flex-direction: column;
-        text-align: right;
-    }
-
-    /* active */
-
-    .burger-menu.active {
-        z-index: 444;
-        transform: translateX(-30vw) translateY(-2vw);
-        transition: 0.3s ease;
-    }
-
-    .burger-menu.active::before {
-        transform: rotate(45deg);
-        top: 9px;
-        transition: 0.3s ease;
-    }
-    .burger-menu.active::after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-        transition: 0.3s ease;
-    }
-
-    .burger-menu.active span {
-        transform: scale(0);
-    }
-
-    .main-nav.active {
-		 display: block;
-       transform: translate(0);
-       transition: 0.3s ease;
-    }
-	 .content-blocker.active{
-		display: block;
+buton1.addEventListener('click', function(){
+	if(opsp1 == true){
+		ops1.classList.toggle('active')
+		buton1.src = "фотки/arrowUp.png"
+		opsp1 = false;
+		item1.style.height = '361px';
+	} else {
+		buton1.src = "фотки/arrowDwn.png"
+		ops1.classList.remove('active')
+		opsp1 = true;
+		item1.style.height = '326px';
 	}
-	
-	.katalog{
-		display: grid; 
-		grid-template-columns: 220px; 
-		grid-template-rows: repeat(3, 1fr); 
-		grid-column-gap: 20px;
-		grid-row-gap: 10px; 
-	}
+})
 
-}
-ul{
-	list-style: none;
-}
-@media (min-width: 700px) and (max-width: 1800px) {
-	.image{
-		width: 400px;
-		height: 400px;
+let opsp2 = true;
+let ops2 = document.querySelector('.ops2')
+let buton2 = document.querySelector('.buton2')
+
+buton2.addEventListener('click', function(){
+	if(opsp2 == true){
+		ops2.classList.toggle('active')
+		buton2.src = "фотки/arrowUp.png"
+		opsp2 = false;
+		item2.style.height = '361px';
+	} else {
+		buton2.src = "фотки/arrowDwn.png"
+		ops2.classList.remove('active')
+		opsp2 = true;
+		item2.style.height = '326px';
 	}
-	.katalog{
-	display: grid; 
-	grid-template-columns: repeat(3, 1fr); 
-	grid-template-rows: repeat(3, 1fr); 
-	grid-column-gap: 10px;
-	grid-row-gap: 10px; 
-}
+})
+
+let opsp3 = true;
+let ops3 = document.querySelector('.ops3')
+let buton3 = document.querySelector('.buton3')
+
+buton3.addEventListener('click', function(){
+	if(opsp3 == true){
+		ops3.classList.toggle('active')
+		buton3.src = "фотки/arrowUp.png"
+		opsp3 = false;
+		item3.style.height = '361px';
+	} else {
+		buton3.src = "фотки/arrowDwn.png"
+		ops3.classList.remove('active')
+		opsp3 = true;
+		item3.style.height = '326px';
+	}
+})
+
+let opsp4 = true;
+let ops4 = document.querySelector('.ops4')
+let buton4 = document.querySelector('.buton4')
+
+buton4.addEventListener('click', function(){
+	if(opsp4 == true){
+		ops4.classList.toggle('active')
+		buton4.src = "фотки/arrowUp.png"
+		opsp4 = false;
+		item4.style.height = '361px';
+	} else {
+		buton4.src = "фотки/arrowDwn.png"
+		ops4.classList.remove('active')
+		opsp4 = true;
+		item4.style.height = '326px';
+	}
+})
+
+let opsp5 = true;
+let ops5 = document.querySelector('.ops5')
+let buton5 = document.querySelector('.buton5')
+
+buton5.addEventListener('click', function(){
+	if(opsp5 == true){
+		ops5.classList.toggle('active')
+		buton5.src = "фотки/arrowUp.png"
+		opsp5 = false;
+		item5.style.height = '361px';
+	} else {
+		buton5.src = "фотки/arrowDwn.png"
+		ops5.classList.remove('active')
+		opsp5 = true;
+		item5.style.height = '326px';
+	}
+})
+
+let opsp6 = true;
+let ops6 = document.querySelector('.ops6')
+let buton6 = document.querySelector('.buton6')
+
+buton6.addEventListener('click', function(){
+	if(opsp6 == true){
+		ops6.classList.toggle('active')
+		buton6.src = "фотки/arrowUp.png"
+		opsp6 = false;
+		item6.style.height = '361px';
+	} else {
+		buton6.src = "фотки/arrowDwn.png"
+		ops6.classList.remove('active')
+		opsp6 = true;
+		item6.style.height = '326px';
+	}
+})
+
+let opsp7 = true;
+let ops7 = document.querySelector('.ops7')
+let buton7 = document.querySelector('.buton7')
+
+buton7.addEventListener('click', function(){
+	if(opsp7 == true){
+		ops7.classList.toggle('active')
+		buton7.src = "фотки/arrowUp.png"
+		opsp7 = false;
+		item7.style.height = '361px';
+	} else {
+		buton7.src = "фотки/arrowDwn.png"
+		ops7.classList.remove('active')
+		opsp7 = true;
+		item7.style.height = '326px';
+	}
+})
+
+let opsp8 = true;
+let ops8 = document.querySelector('.ops8')
+let buton8 = document.querySelector('.buton8')
+
+buton8.addEventListener('click', function(){
+	if(opsp8 == true){
+		ops8.classList.toggle('active')
+		buton8.src = "фотки/arrowUp.png"
+		opsp8 = false;
+		item8.style.height = '361px';
+	} else {
+		buton8.src = "фотки/arrowDwn.png"
+		ops8.classList.remove('active')
+		opsp8 = true;
+		item8.style.height = '326px';
+	}
+})
+
+let opsp9 = true;
+let ops9 = document.querySelector('.ops9')
+let buton9 = document.querySelector('.buton9')
+
+buton9.addEventListener('click', function(){
+	if(opsp9 == true){
+		ops9.classList.toggle('active')
+		buton9.src = "фотки/arrowUp.png"
+		opsp9 = false;
+		item9.style.height = '361px';
+	} else {
+		buton9.src = "фотки/arrowDwn.png"
+		ops9.classList.remove('active')
+		opsp9 = true;
+		item9.style.height = '326px';
+	}
+})
+
+// Найти все ссылки начинающиеся на # 
+const anchors = document.querySelectorAll('a[href^="#"]') 
+ 
+// Цикл по всем ссылкам 
+for(let anchor of anchors) { 
+  anchor.addEventListener("click", function(e) { 
+    e.preventDefault() // Предотвратить стандартное поведение ссылок 
+    // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно) 
+    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body' 
+    // Плавная прокрутка до элемента с id = href у ссылки 
+    document.querySelector(goto).scrollIntoView({ 
+      behavior: "smooth", 
+      block: "start" 
+    }) 
+  }) 
 }
